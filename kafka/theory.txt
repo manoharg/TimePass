@@ -1,0 +1,28 @@
+Developed at linkedin
+1. distributed streaming platform
+producer --> broker --> consumer
+provides connectors, stream processing
+Taxonomy:
+Producer: sends Array of bytes
+consumer: receives data
+broker: broker b/w producer and consumer
+cluster: group of computers sharing workload
+topic: unique name for message stream . 
+partition: topic is divided into partitions. we have to decide into how many partitions a topic should be broker. Each partition sits on a single machine
+offset: unique id for a message in a partition
+
+To identify a message  , you need to know three things : topic, partition, offset
+
+Fault tolerance: data should be availabe even if one system is failed. In kafka, it is achieved through data replication. each partition is replicated 
+using replication factor, and one broker would act as leader and others act as followers. read and write for that topic are made through leader only
+
+To start multiple brokers on same system, brokerid , listerners , log directory should be changed
+
+Broker configurations:
+zookeeper.connect = address of zookeeper , connector of all brokers
+default.replication.factor=1
+num.partitions=1
+log.retention.ms= default is 7 days, time for which data needs to be stored in kafka. 
+
+
+

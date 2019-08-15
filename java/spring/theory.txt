@@ -1,0 +1,23 @@
+Dependency injection / Dependency inversion:
+separation of concerns
+
+
+Servlet:
+When a client sends a request to a page, the web container(tomcat, glassfish, jboss) on the server will look in the web.xml (deployment descriptor) and will serve the page.
+In spring, Dispatcher servlet does this work,all requests will be forwarded to dispatcher servlet.
+Code:
+<servlet>
+	<name>
+	<class>
+</servlet>
+<servlet-mapping>
+	<name>
+	</url>
+</servlet-mapping>
+
+Calling a servlet from another:
+RequestDispatcher or Redirect:
+One servlet can call other servlet using requestDispatcher, and session can be used to retrieve attributes. You can also set in httpRequest (setAttribute)
+In RequestDispatcher , client will not know from where the response is getting.
+In redirecting, client will be redirected (Payment gateway)
+

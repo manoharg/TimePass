@@ -1,0 +1,12 @@
+ NoSQL(Not only sql)
+ Ex: mongodb, reddis, cassandra
+ --> stored bjson(binary json)
+ --> auto shrading to scale horizontally
+ Differences between RDBMS and Mongodb:
+
+ Collection(Schema less) vs Table
+ Document vs Row
+ Field vs column
+
+ Install Mongodb in ubuntu:
+ 
